@@ -1,1 +1,27 @@
-<p>propieties works!</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col mt-3">
+    <h2>Propiedades:</h2>
+    <hr />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col">
+    <div class="row">
+      <div class="col-4 mb-2"
+           *ngFor="let item of propiedades">
+        <div class="card">
+          <app-min-map [lngLat]="item.lngLat" class="card-img-top"></app-min-map>
+          <div class="card-body">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p class="card-text">
+              {{item.descripcion}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
